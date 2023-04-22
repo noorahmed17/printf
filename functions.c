@@ -49,7 +49,7 @@ int print_string(va_list types, char buffer[],
 		len = precision;
 	if (width > len)
 	{
-		if (flags && F_MINUS)
+		if (flags & F_MINUS)
 		{
 			write(1, &str[0], len);
 			for (i = width - len; i > 0; i--)
