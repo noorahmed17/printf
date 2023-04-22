@@ -127,7 +127,7 @@ int print_hexa(va_list types, char map_to[], char buffer[],
 	}
 	if (flags & F_HASH && init_num != 0)
 	{
-		buffer[i--] = flage_cha;
+		buffer[i--] = flag_ch;
 		buffer[i--] = '0';
 	}
 	i++;
