@@ -49,6 +49,9 @@ int width, int flags, char padd, char extra_c, int padd_start);
 int write_unsgnd(int is_negative, int index,
 char buffer[],
 int flags, int width, int precision, int size);
+long int convert_size_number(long int num, int size);
+long int convert_size_unsgnd(unsigned long int num, int size);
+
 
 /*flags*/
 #define F_MINUS 1
