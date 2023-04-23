@@ -31,7 +31,7 @@ return (write(1, &buf[0], 1) +
 write(1, &buf[BUFF_SIZE - i - 1], width - 1));
 else
 return (write(1, &buf[BUFF_SIZE - i - 1], width - 1) +
-write(1, &buffer[0], 1));
+write(1, &buf[0], 1));
 }
 return (write(1, &buf[0], 1));
 }
@@ -139,7 +139,7 @@ int length = BUFF_SIZE - index - 1, i = 0;
 char padd = ' ';
 UNUSED(is_negative);
 UNUSED(size);
-if (precision == 0 && ind == BUFF_SIZE - 2 && buffer[index] == '0')
+if (precision == 0 && index == BUFF_SIZE - 2 && buffer[index] == '0')
 return (0); /* printf(".0d", 0)  no char is printed */
 if (precision > 0 && precision < length)
 padd = ' ';
@@ -210,7 +210,7 @@ buffer[--padd_start] = extra_c;
 buffer[1] = '0';
 buffer[2] = 'x';
 return (write(1, &buffer[padd_start], i - padd_start) +
-write(1, &buffer[ind], length - (1 - padd_start) - 2));
+write(1, &buffer[ind], leth - (1 - padd_start) - 2));
 }
 }
 buffer[--ind] = 'x';

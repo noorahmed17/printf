@@ -17,7 +17,7 @@ for (curr_x = *x + 1; format[curr_x] != '\0'; curr_x++)
 for (y = 0; FLAGS_CH[y] != '\0'; y++)
 if (format[curr_x] == FLAGS_CH[y])
 {
-flags |= FLAGS_ARR[j];
+flags |= FLAGS_ARR[y];
 break;
 }
 if (FLAGS_CH[y] == 0)
