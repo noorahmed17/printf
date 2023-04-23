@@ -1,4 +1,0 @@
-      |      ^
-      handle_print.c:27:13: error: ‘fm_types’ undeclared (first use in this function)
-         27 | for (i = 0; fm_types[i].fm != '\0'; i++)
-	       |             ^~~~~~~~0;276;0c
