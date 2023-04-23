@@ -68,7 +68,7 @@ int width, int flags, char padd, char extra_c, int padd_start);
 int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
-int handle_write(char c, char buf[],
+int handle_write(char ch, char buf[],
 		int flags, int width, int precision, int size);
 int write_number(int is_positive, int ind, char buffer[],
 int flags, int wi, int pre, int size);
