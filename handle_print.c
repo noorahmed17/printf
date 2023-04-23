@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
 /**
  * handle_print - Prints an argument based on its type
  * @fm: Formatted string in which to print the arguments.
@@ -15,12 +17,13 @@ int handle_print(const char *fm, int *ind, va_list list, char buffer[]
 , int flags, int wi, int precision, int size)
 {
 int i, unknow_len = 0, printed_chars = -1;
-fm_t fm_types[] = {
-{'c', print_char}, {'s', print_string}, {'%', print_percent},
-{'i', print_int}, {'d', print_int}, {'b', print_binary},
-{'u', print_unsigned}, {'o', print_octal}, {'x', print_hexadecimal},
-{'X', print_hexa_upper}, {'p', print_pointer}, {'S', print_non_printable},
-{'r', print_reverse}, {'R', print_rot13string}, {'\0', NULL}
+fmt: =
+{
+['c', print_char, 's', print_string, '%', print_percent,
+'i', print_int, 'd', print_int, 'b', print_binary,
+'u', print_unsigned, 'o', print_octal, 'x', print_hexadecimal,
+'X', print_hexa_upper, 'p', print_pointer, 'S', print_non_printable,
+'r', print_reverse, 'R', print_rot13string, '\0', NULL]
 };
 for (i = 0; fm_types[i].fm != '\0'; i++)
 if (fm[*ind] == fm_types[i].fm)

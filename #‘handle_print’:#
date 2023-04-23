@@ -1,0 +1,137 @@
+handle_print.c:20:1: error: unknown type name ‘fmt_t’
+   20 | fmt_t fm_types = {
+         | ^~~~~
+	 handle_print.c:21:6: warning: excess elements in scalar initializer
+	    21 | 'c', print_char, 's', print_string, '%', print_percent,
+	          |      ^~~~~~~~~~
+		  handle_print.c:21:6: note: (near initialization for ‘fm_types’)
+		  handle_print.c:21:18: warning: excess elements in scalar initializer
+		     21 | 'c', print_char, 's', print_string, '%', print_percent,
+		           |                  ^~~
+			   handle_print.c:21:18: note: (near initialization for ‘fm_types’)
+			   handle_print.c:21:23: warning: excess elements in scalar initializer
+			      21 | 'c', print_char, 's', print_string, '%', print_percent,
+			            |                       ^~~~~~~~~~~~
+				    handle_print.c:21:23: note: (near initialization for ‘fm_types’)
+				    handle_print.c:21:37: warning: excess elements in scalar initializer
+				       21 | 'c', print_char, 's', print_string, '%', print_percent,
+				             |                                     ^~~
+					     handle_print.c:21:37: note: (near initialization for ‘fm_types’)
+					     handle_print.c:21:42: warning: excess elements in scalar initializer
+					        21 | 'c', print_char, 's', print_string, '%', print_percent,
+						      |                                          ^~~~~~~~~~~~~
+						      handle_print.c:21:42: note: (near initialization for ‘fm_types’)
+						      handle_print.c:22:1: warning: excess elements in scalar initializer
+						         22 | 'i', print_int, 'd', print_int, 'b', print_binary,
+							       | ^~~
+							       handle_print.c:22:1: note: (near initialization for ‘fm_types’)
+							       handle_print.c:22:6: warning: excess elements in scalar initializer
+							          22 | 'i', print_int, 'd', print_int, 'b', print_binary,
+								        |      ^~~~~~~~~
+									handle_print.c:22:6: note: (near initialization for ‘fm_types’)
+									handle_print.c:22:17: warning: excess elements in scalar initializer
+									   22 | 'i', print_int, 'd', print_int, 'b', print_binary,
+									         |                 ^~~
+										 handle_print.c:22:17: note: (near initialization for ‘fm_types’)
+										 handle_print.c:22:22: warning: excess elements in scalar initializer
+										    22 | 'i', print_int, 'd', print_int, 'b', print_binary,
+										          |                      ^~~~~~~~~
+											  handle_print.c:22:22: note: (near initialization for ‘fm_types’)
+											  handle_print.c:22:33: warning: excess elements in scalar initializer
+											     22 | 'i', print_int, 'd', print_int, 'b', print_binary,
+											           |                                 ^~~
+												   handle_print.c:22:33: note: (near initialization for ‘fm_types’)
+												   handle_print.c:22:38: warning: excess elements in scalar initializer
+												      22 | 'i', print_int, 'd', print_int, 'b', print_binary,
+												            |                                      ^~~~~~~~~~~~
+													    handle_print.c:22:38: note: (near initialization for ‘fm_types’)
+													    handle_print.c:23:1: warning: excess elements in scalar initializer
+													       23 | 'u', print_unsigned, 'o', print_octal, 'x', print_hexadecimal,
+													             | ^~~
+														     handle_print.c:23:1: note: (near initialization for ‘fm_types’)
+														     handle_print.c:23:6: error: ‘print_unsigned’ undeclared (first use in this function); did you mean ‘write_unsgnd’?
+														        23 | 'u', print_unsigned, 'o', print_octal, 'x', print_hexadecimal,
+															      |      ^~~~~~~~~~~~~~
+															            |      write_unsgnd
+																    handle_print.c:23:6: note: each undeclared identifier is reported only once for each function it appears in
+																    handle_print.c:23:6: warning: excess elements in scalar initializer
+																    handle_print.c:23:6: note: (near initialization for ‘fm_types’)
+																    handle_print.c:23:22: warning: excess elements in scalar initializer
+																       23 | 'u', print_unsigned, 'o', print_octal, 'x', print_hexadecimal,
+																             |                      ^~~
+																	     handle_print.c:23:22: note: (near initialization for ‘fm_types’)
+																	     handle_print.c:23:27: error: ‘print_octal’ undeclared (first use in this function); did you mean ‘print_char’?
+																	        23 | 'u', print_unsigned, 'o', print_octal, 'x', print_hexadecimal,
+																		      |                           ^~~~~~~~~~~
+																		            |                           print_char
+																			    handle_print.c:23:27: warning: excess elements in scalar initializer
+																			    handle_print.c:23:27: note: (near initialization for ‘fm_types’)
+																			    handle_print.c:23:40: warning: excess elements in scalar initializer
+																			       23 | 'u', print_unsigned, 'o', print_octal, 'x', print_hexadecimal,
+																			             |                                        ^~~
+																				     handle_print.c:23:40: note: (near initialization for ‘fm_types’)
+																				     handle_print.c:23:45: error: ‘print_hexadecimal’ undeclared (first use in this function)
+																				        23 | 'u', print_unsigned, 'o', print_octal, 'x', print_hexadecimal,
+																					      |                                             ^~~~~~~~~~~~~~~~~
+																					      handle_print.c:23:45: warning: excess elements in scalar initializer
+																					      handle_print.c:23:45: note: (near initialization for ‘fm_types’)
+																					      handle_print.c:24:1: warning: excess elements in scalar initializer
+																					         24 | 'X', print_hexa_upper, 'p', print_pointer, 'S', print_non_printable,
+																						       | ^~~
+																						       handle_print.c:24:1: note: (near initialization for ‘fm_types’)
+																						       handle_print.c:24:6: error: ‘print_hexa_upper’ undeclared (first use in this function)
+																						          24 | 'X', print_hexa_upper, 'p', print_pointer, 'S', print_non_printable,
+																							        |      ^~~~~~~~~~~~~~~~
+																								handle_print.c:24:6: warning: excess elements in scalar initializer
+																								handle_print.c:24:6: note: (near initialization for ‘fm_types’)
+																								handle_print.c:24:24: warning: excess elements in scalar initializer
+																								   24 | 'X', print_hexa_upper, 'p', print_pointer, 'S', print_non_printable,
+																								         |                        ^~~
+																									 handle_print.c:24:24: note: (near initialization for ‘fm_types’)
+																									 handle_print.c:24:29: warning: excess elements in scalar initializer
+																									    24 | 'X', print_hexa_upper, 'p', print_pointer, 'S', print_non_printable,
+																									          |                             ^~~~~~~~~~~~~
+																										  handle_print.c:24:29: note: (near initialization for ‘fm_types’)
+																										  handle_print.c:24:44: warning: excess elements in scalar initializer
+																										     24 | 'X', print_hexa_upper, 'p', print_pointer, 'S', print_non_printable,
+																										           |                                            ^~~
+																											   handle_print.c:24:44: note: (near initialization for ‘fm_types’)
+																											   handle_print.c:24:49: warning: excess elements in scalar initializer
+																											      24 | 'X', print_hexa_upper, 'p', print_pointer, 'S', print_non_printable,
+																											            |                                                 ^~~~~~~~~~~~~~~~~~~
+																												    handle_print.c:24:49: note: (near initialization for ‘fm_types’)
+																												    handle_print.c:25:1: warning: excess elements in scalar initializer
+																												       25 | 'r', print_reverse, 'R', print_rot13string, '\0', NULL
+																												             | ^~~
+																													     handle_print.c:25:1: note: (near initialization for ‘fm_types’)
+																													     handle_print.c:25:6: warning: excess elements in scalar initializer
+																													        25 | 'r', print_reverse, 'R', print_rot13string, '\0', NULL
+																														      |      ^~~~~~~~~~~~~
+																														      handle_print.c:25:6: note: (near initialization for ‘fm_types’)
+																														      handle_print.c:25:21: warning: excess elements in scalar initializer
+																														         25 | 'r', print_reverse, 'R', print_rot13string, '\0', NULL
+																															       |                     ^~~
+																															       handle_print.c:25:21: note: (near initialization for ‘fm_types’)
+																															       handle_print.c:25:26: warning: excess elements in scalar initializer
+																															          25 | 'r', print_reverse, 'R', print_rot13string, '\0', NULL
+																																        |                          ^~~~~~~~~~~~~~~~~
+																																	handle_print.c:25:26: note: (near initialization for ‘fm_types’)
+																																	handle_print.c:25:45: warning: excess elements in scalar initializer
+																																	   25 | 'r', print_reverse, 'R', print_rot13string, '\0', NULL
+																																	         |                                             ^~~~
+																																		 handle_print.c:25:45: note: (near initialization for ‘fm_types’)
+																																		 handle_print.c:25:51: warning: excess elements in scalar initializer
+																																		    25 | 'r', print_reverse, 'R', print_rot13string, '\0', NULL
+																																		          |                                                   ^~~~
+																																			  handle_print.c:25:51: note: (near initialization for ‘fm_types’)
+																																			  handle_print.c:27:21: error: subscripted value is neither array nor pointer nor vector
+																																			     27 | for (i = 0; fm_types[i].fm != '\0'; i++)
+																																			           |                     ^
+																																				   handle_print.c:28:25: error: subscripted value is neither array nor pointer nor vector
+																																				      28 | if (fm[*ind] == fm_types[i].fm)
+																																				            |                         ^
+																																					    handle_print.c:29:17: error: subscripted value is neither array nor pointer nor vector
+																																					       29 | return (fm_types[i].fn(list, buffer, flags, wi, precision, size));
+																																					             |                 ^
+																																						     handle_print.c:30:13: error: subscripted value is neither array nor pointer nor vector
+																																						        30 | if (fm_types[i].fm == '\0;276;0c
