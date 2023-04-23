@@ -9,7 +9,7 @@
  * @size: Size specifier
  * Return: Number of chars printed.
  */
-int handle_write_char(char ch, char buf[],
+int handle_write(char ch, char buf[],
 int flags, int width, int precision, int size)
 {
  /* char is stored at left and paddind at buf's right */
