@@ -12,7 +12,7 @@ int get_precision(const char *format, int *i, va_list list);
 int get_size(const char *format, int *n);
 /**
  * struct fmt - Struct op
- * @fmt: The format.
+ * @fm: The format.
  * @fn: The function associated.
  */
 struct fmt
@@ -69,7 +69,7 @@ int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
 int handle_write(char c, char buf[],
-int flags, int width, int precision, int size);
+		int flags, int width, int precision, int size);
 int write_number(int is_positive, int ind, char buffer[],
 int flags, int wi, int pre, int size);
 int write_num(int ind, char bff[], int flags, int width, int precision,
