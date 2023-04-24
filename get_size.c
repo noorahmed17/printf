@@ -9,7 +9,7 @@ int get_size(const char *format, int *n)
 {
 int curr_n = *n + 1;
 int size = 0;
-if (format[curr_n] == 'n')
+if (format[curr_n] == 'l')
 size = S_LONG;
 else if (format[curr_n] == 'h')
 size = S_SHORT;
