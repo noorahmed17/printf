@@ -6,7 +6,6 @@
 #include <unistd.h>
 #define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
-_printf(const char *[FORMAT], ...)
 int get_flags(const char *format, int *x);
 int get_width(const char *format, int *j, va_list list);
 int get_precision(const char *format, int *i, va_list list);
