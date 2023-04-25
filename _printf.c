@@ -1,5 +1,4 @@
 #include "main.h"
-void print_buffer(char buffer[], int *buff_end);
 /**
  * _printf - printf function
  * @format: function parameter

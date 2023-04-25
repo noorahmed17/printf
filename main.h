@@ -31,6 +31,7 @@ int handle_print(const char *fm, int *i,
 va_list list, char buffer[],
 int flags, int wi, int precision, int size);
 /*functions*/
+void print_buffer(char buffer[], int *buff_ind);
 int print_char(va_list types, char buffer[],
 int flags, int width, int precision, int size);
 int print_string(va_list types, char buffer[],
