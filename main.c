@@ -1,5 +1,3 @@
-#include <limits.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -47,8 +45,8 @@ int main(void)
  *
  * Return: Always 0
  */
-int main(void)
+/**int main(void)
 {
     _printf("%S\n", "Best\nSchool");
     return (0);
-}
+}*/
