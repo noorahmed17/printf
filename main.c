@@ -39,6 +39,16 @@ int main(void)
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
     _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");
+    printf("Unknown:[/r]\n");
+    return (0);
+}
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    _printf("%S\n", "Best\nSchool");
     return (0);
 }
