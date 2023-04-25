@@ -1,56 +1,90 @@
 #include "main.h"
+
 /**
- * _printf - printf function
- * @format: function parameter
- * @...: variable arguments
- * Return: printed chars
+ * _printf - CUSTOM PRINTF FUNCTIONS FOR IMPLEMENTATION.
+ * @format: FORMAT STRING
+ *
+ * Return: NUMBER OF CHARACTER PRINTED.
  */
 int _printf(const char *format, ...)
 {
-	int i, printed = 0, printed_chars = 0;
-	int flags, width, precision, size, buff_end = 0;
+	int printed_chars = 0;
 	va_list args;
-	char buffer[BUFF_SIZE]; /*1024*/
+	char buffer[BUFF_SIZE];
+	int buffer_index = 0;
 
-	if (format == NULL)
-		return (-1);
 	va_start(args, format);
-	for (i = 0; format && format[i] != '\0'; i++)
+
+
+	while (*format != '\0')
 	{
-		if (format[i] != '%')
+		if (*format == '%')
 		{
-			buffer[buff_end++] = format[i];
-			if (buff_end == BUFF_SIZE)
-				print_buffer(buffer, &buff_end);
-			printed_chars++;
+			format++;
+			if (*format == 'c')
+			{
+				char c = va_arg(args, int);
+
+				buffer[buffer_index++] = c;
+				if (buffer _index == BUFF_SIZE)
+				{
+					wirte(1, buffer_index);
+					printed_chars += buffer_index;
+					buffer_index = 0;
+				}
+			}
+
+			else if (*format == 's')
+			{
+				char *s = va_arg(args, char *);
+
+				if (s == NULL)
+				{
+					s = "(null)";
+				}
+
+				while (*s != '\0')
+				{
+					buffer[buffer_index++] = *s++;
+
+					if (buffer_index == BUFF_SIZE)
+					{
+						write(1, buffer, buffer_index);
+						printed_chars += buffer_index;
+						buffer_index = 0;
+					}
+				}
+			}
+			else if (*format == '%')
+			{
+				buffer[buffer_index++] = '%';
+
+				if (buffer_index == BUFF_SIZE)
+				{
+					write(1, buffer, buffer_index);
+					printed_chars += buffer_index;
+					buffer_index = 0;
+				}
+			}
 		}
 		else
 		{
-			print_buffer(buffer, &buff_end);
-			flags = get_flags(format, &i);
-			width = get_width(format, &i, args);
-			precision = get_precision(format, &i, args);
-			size = get_size(format, &i);
-			++i;
-			printed = handle_print(format, &i, args, buffer, flags,
-					width, precision, size);
-			if (printed == -1)
-				return (-1);
-			printed_chars += printed;
+			buffer[buffer_index++] = *format;
+
+			if (buffer_index == BUFF_SIZE)
+			{
+				write(1, buffer, buffer_index);
+				printed_chars += buffer_index;
+				buffer_index = 0;
+			}
 		}
+		format++;
 	}
-	print_buffer(buffer, &buff_end);
+
+	write(1, buffer, buffer_index);
+	printed_chars += buffer_index;
+
 	va_end(args);
+
 	return (printed_chars);
-}
-/**
- * print_buffer - print contents of buffer
- * @buffer: function parameter
- * @buff_end: function parameter
- */
-void print_buffer(char buffer[], int *buff_end)
-{
-	if (*buff_end > 0)
-		write(1, &buffer[0], *buff_end);
-	*buff_end = 0;
 }
