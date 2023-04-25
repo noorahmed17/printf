@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 {
 	int i, printed = 0, printed_chars = 0;
 	int flags, width, precision, size, buff_end = 0;
-	va_list args;
+	va_list list;
 	char buffer[BUFF_SIZE]; /*1024*/
 
 	if (format == NULL)
